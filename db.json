@@ -1,0 +1,12 @@
+{
+	"agency1": [{ "case": 1, "name": "Sarah" }],
+	"agency2": [{ "case": 1, "ethnicity": "Caucasian" }],
+	"agency3": [{ "case": 1, "dob": "1/1/2000" }],
+	"agency4": [{ "case": 1, "address": "123 1st St, Omaha, NE" }],
+	"agency5": [{ "case": 1, "phone": "555-123-4567" }],
+	"agency6": [{ "case": 1, "email": "sarah@gmail.com" }],
+	"agency7": [{ "case": 1, "openCase": "true" }],
+	"agency8": [{ "case": 1, "perpetratorIdentified": "false" }],
+	"agency9": [{ "case": 1, "perpetratorInTrial": "false" }],
+	"agency10": [{ "case": 1, "perpetratorProsecuted": "false" }]
+}
