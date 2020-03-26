@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 // import useAxios from "axios-hooks";
 import Axios from "axios";
 
 const App = () => {
+	// const [cases, setCases] = useState({});
+
 	const agencies = [
 		"agency1",
 		"agency2",
@@ -16,22 +18,22 @@ const App = () => {
 		"agency10"
 	];
 
-	Axios.get(`http://localhost:3000/${agencies[0]}`)
-		.then(res => console.log(res.data[0]))
-		.catch(err => console.log(err));
-
-	// const [{ data, loading, error }, refetch] = useAxios(
-	// 	"https://jsonplaceholder.typicode.com/users/"
-	// );
-
-	// if (loading) return <p>Loading...</p>;
-	// if (error) return <p>Error!</p>;
+	// loop through index and values of agencies array
+	agencies.forEach((value, index) => {
+		// make API call to localhost:3000/agencyIndex
+		Axios.get(`http://localhost:3000/${value}`)
+			// console log API response if successful
+			.then(res => {
+				console.log(res.data[0]);
+				// setCases(...res.data[0]);
+			})
+			// console log API response if unsuccessful
+			.catch(err => console.log(err));
+	});
 
 	return (
 		<div className="App">
 			<h1>Case Management</h1>
-			{/* <button onClick={refetch}>refetch</button> */}
-			{/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
 		</div>
 	);
 };
